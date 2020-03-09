@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>QST2 documentation</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="content/style/style_a.css">
+    
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>
+                    <a href="#">QST2</a> <!--go top-->    
+                </h3>          
+            </div>
+
+            <ul class="list-unstyled components">
+                    <li>
+                        <a href="#go_Install">Install & Uninstall</a>
+                    </li>
+                    <li>  
+                        <a href="#go_SubD">
+                            <img src="content/image/QST2_SubD_ico.png" alt="" class="menu_ico"> 
+                            SubD</a>
+                   </li>
+
+                   <li>  
+                    <a href="#go_UnSubD">
+                        <img src="content/image/QST2_UnSubD_ico.png" alt="" class="menu_ico"> 
+                        UnSubD</a>
+                   </li>
+
+                   <li>  
+                    <a href="#go_ToggSubD">
+                        <img src="content/image/QST2_ToggSubD_ico.png" alt="" class="menu_ico"> 
+                        Toggle SubD</a>
+                   </li>
+
+                   <li>  
+                    <a href="#go_SafeToPoly">
+                        <img src="content/image/QST2_SafeToPoly_ico.png" alt="" class="menu_ico"> 
+                        Safe to Poly</a>
+                   </li>
+                   <li>  
+                    <a href="#go_SafeToSpline">
+                        <img src="content/image/QST2_SafeToSpline_ico.png" alt="" class="menu_ico"> 
+                        Safe to Spline</a>
+                   </li>
+
+                   <li>  
+                    <a href="#go_QSTSetting">
+                        <img src="content/image/QST2_Setting_ico.png" alt="" class="menu_ico"> 
+                        QST Settings</a>
+                  </li>
+                   
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://gumroad.com/dmitry_gubkin" target="_blank" rel="noopener noreferrer" class="download">
+                        <img src="content/image/gumroad_icon_128.png" alt="">
+                         Get on Gumroad</a>
+                       
+                </li>
+                <li>
+                    <a href="https://www.artstation.com/dmitry_g" target="_blank" rel="noopener noreferrer" class="download">
+                        <img src="content/image/artstation_ico_128.png" alt="">
+                        Artstation</a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> 
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+               <i id="togg_ico" class="fas fa-align-justify"></i>
+            </button>  
+                <div class="md-form active-cyan active-cyan-2 mb-3">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </nav>
+
+            <h2>What is QST2</h2>
+            <p>
+                Quick SubD Toggle(QST) 2 is collection of <a href="#go_SubD" class="goTo">scripts</a> and <a href="#" class="goTo">feachers</a>
+                 for 3ds max that helps easy <b>subdivide/unsubdivide</b> models like in Maya(1 and 3 keys by default), Modo(Tab key by default) and Blender.     
+            </p>
+            <div>
+                <ul>
+                    <li>
+                        Converting to Editable_Poly/Editable_Spline with <b>reset XForm(hierarchy supports)</b> and <b>preserving subdivision</b>
+                    </li>
+                    <li>
+                        Supporting <b>modifier based</b> (TurboSmooth, OpenSubdiv, MeshSmooth) and <b>NURMS based</b> subdivision
+                    </li>
+                    <li>
+                        <b>Smart instansing</b> of subdivision modifiers 
+                    </li>
+                    <li>
+                        <b>Non Destructive</b> workflow
+                    </li>
+                    <li>
+                        Keeping working on saved scenes(automatic getting modifiers settings from scene and keep it instancing)
+                    </li>
+                    <li>
+                        Switching setting on a fly
+                    </li>
+                    <li>
+                        Storing/Loading preset
+                    </li>
+                    <li>
+                        <b>Non required be installed</b> to open scenes that used QST 
+                    </li>
+                    <li>
+                        <a href="#" class="goTo">and more ...</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="videoBlock">
+                <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>
+            </div>
+             <!--Install-->
+            <h2 >Install & Uninstall<a name = "go_Install" class="goToHead"></a></h2>
+            <div>
+                <ul>
+                    <li>3ds max <b>2016+ required</b>. Make sure 3ds max runs <b>not in admin mode</b></li>
+                    <li>Drag & Drop <b>*.mzp</b> file in 3ds max viewport</li>
+                    <li>Hit <b>Install</b> or <b>UnInstall</b></li>
+                    <li>Go to <b>Customize -> Customize User Interface</b>, choose <b>"Quick SubD Toggle"</b> in the <b>Category</b> list and use it!</li>
+
+                </ul>
+                <div class="gifBlock">
+                    <div>
+                        <img src="content/gif/qst2_install.gif" width="500"  alt="">
+                    </div>
+                    <div> 
+                        <img src="content/gif/qst2_category.gif" width="500"  alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+             <!--SubD-->
+            <div>
+                <h2>
+                    SubD (Maya style)<a name="go_SubD" class="goToHead"></a>
+                </h2>
+                <img src="content/image/QST2_SubD_ico.png" alt="" class="header_ico">
+
+                <p>
+                    SubD script adds subdivision on selected objects, if you use working mode - <a href="#" class="goTo">"Modifier based"</a> it adds modifier on top of the stack, if 
+                    <a href="#" class="goTo">"Hybrid"</a> and any of subobjects levels(vertex, edge..)
+                     is active it adds NURMS subdivision(<b>NURMS works only if Editable_Poly in stack is selected</b>) other cases adds modifier.
+                </p>
+                <p>
+                    <b>When nothing is selected</b> you can <b>switch modifier type</b> to the next(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
+                    Script inform you about active modifier type and it iterations count at center bottomn of the viewport.
+                </p>
+                <p>
+                    <b>Setting per modifier type are unique</b> and you can change them directly in modifier panel. All <b>modifiers are instances</b>.
+                </p>
+                <p>
+                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>
+                </p>
+                <p>
+                    Only one instance of <b>"Global_QSubD_Preview"</b> modifier can be applied per object. in <a href="#" class="goTo">"Hybrid"</a> mode you can apply only one modifier instance or only NURMS subdivision.
+                </p>
+                <p>
+                    This operation <b>not undoable</b>, run <a href="#go_UnSubD" class="goTo">UnSubD</a> or <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> script for removing subdivision.
+                </p>
+
+                <div class="gifBlock">
+                    <div><img src="content/gif/qst2_SubD_01.gif" width="500"  alt=""></div>
+                    <div></span> <img src="content/gif/qst2_nonGeo_01.gif" width="500"  alt=""></div>
+                    <div> <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt=""></div>
+                </div>
+                                 
+            </div>
+            <div class="line"></div>
+
+            <!--UnSubD-->
+            <div>
+                <h2>
+                    UnSubD<a name="go_UnSubD" class="goToHead"></a>
+                </h2>
+                <img src="content/image/QST2_UnSubD_ico.png" alt="" class="header_ico">
+                                 
+            </div>
+            <div class="line"></div>
+
+            <!--ToggSubD-->
+            <div>
+                <h2>
+                    Toggle SubD<a name="go_ToggSubD" class="goToHead"></a>
+                </h2>
+                <img src="content/image/QST2_ToggSubD_ico.png" alt="" class="header_ico">
+                                 
+            </div>
+            <div class="line"></div>
+
+            <!--SafeToPoly-->
+            <div>
+                <h2>
+                    Safe to Poly<a name="go_SafeToPoly" class="goToHead"></a>
+                </h2>
+                <img src="content/image/QST2_SafeToPoly_ico.png" alt="" class="header_ico">
+                                 
+            </div>
+            <div class="line"></div>
+
+             <!--SafeToSpline-->
+             <div>
+                <h2>
+                    Safe to Spline<a name="go_SafeToSpline" class="goToHead"></a>
+                </h2>
+                <img src="content/image/QST2_SafeToSpline_ico.png" alt="" class="header_ico">
+                                 
+            </div>
+            <div class="line"></div>
+
+
+            <!--Settings-->
+            <div>
+
+                <h2>
+                     Settings UI<a name="go_QSTSetting" class="goToHead"></a>
+                </h2>
+                <img src="content/image/QST2_Setting_ico.png" alt="" class="header_ico">
+
+                <div class="QSTSettingUI_block">
+
+                    <div class="contentCenter">
+                        <img src="content/image/Setting_UI_img_01.png" width="500"  alt="">
+                    </div>
+                   
+
+                    <div>
+                        <h3>1.</h3>
+                        <p>
+                            <b>Selects</b> objects with subdivision or <b>Shows</b> SubD information in viewport using filters(type, hidded objects and proccessing source).
+                             <b>Show feature</b> processing  modifiers with specific  name <b>"Global_QSubD_Preview"</b>
+                        </p>
+                        <div><img src="content/gif/qst2_show_select_01.gif"  alt="" width="600px"></div>
+                    </div>
+
+                    <div>
+                        <h3>2.</h3>
+                        <p>
+                            <b>Selects</b> objects with subdivision or <b>Shows</b> SubD information in viewport using filters(type, hidded objects and proccessing source).
+                             <b>Show feature</b> processing  modifiers with specific  name <b>"Global_QSubD_Preview"</b>
+                        </p>
+                        <div><img src="content/gif/qst2_show_select_01.gif"  alt="" width="600px"></div>
+                    </div>
+                                 
+            </div>
+            <div class="line"></div>
+            
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+               /// $("#togg_ico").toggleClass('fas fa-outdent fa-align-justify');
+
+            });
+        });
+    </script>
+</body>
+
+</html>
