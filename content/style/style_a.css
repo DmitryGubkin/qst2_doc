@@ -5,6 +5,7 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
+
 p {
    
     font-size: 1.15em;
@@ -247,29 +248,44 @@ a.download:hover {
 .videoBlock{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: left;
+    align-items: flex-start;
 }
 .videoBlock iframe{
-   width: 720px;
-   height: 480px;
+
+    min-width: 600px;
+    min-height: 450px;
 }
 
 .QSTSettingUI_block
 { 
+    
 }
 
 .contentCenter{
     display: flex;
+    flex-wrap: nowrap;    
+    align-content: center;
     justify-content: center;
+    
+   
+}
+
+.contentCenter img {
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .gifBlock {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;    
+    align-items: flex-start;
+    
 }
 .gifBlock img{
+
     margin-right: 10px;
     margin-bottom: 10px;
+    max-height: 450px;
 }
 
 #content.active {
@@ -286,6 +302,7 @@ a.download:hover {
     }
     #sidebar.active {
         margin-left: 0;
+        max-height: 100%;
     }
     #content {
         width: 100%;
@@ -295,5 +312,30 @@ a.download:hover {
     }
     #sidebarCollapse span {
         display: none;
+    }
+    .gifBlock{
+        flex-wrap: wrap;
+        max-width:100%;
+        max-height: 100%;
+    }
+
+    .gifBlock img{
+        max-width:100%;
+        max-height: 100%;
+    }
+
+    .videoBlock iframe{
+        min-width: 400px;
+        min-height: 300px;
+    }
+
+    .contentCenter{
+        max-width:100%;
+        max-height: 100%;
+    }
+
+    .contentCenter img{
+        max-width:100%;
+        max-height: 100%;
     }
 }

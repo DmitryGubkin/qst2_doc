@@ -19,6 +19,7 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!--https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/Maya-Modeling/files/GUID-4863E5AE-0EA0-4596-B1AE-10C19603838E-htm.html-->
 
 </head>
 
@@ -71,6 +72,11 @@
                         <img src="content/image/QST2_Setting_ico.png" alt="" class="menu_ico"> 
                         QST Settings</a>
                   </li>
+
+                  <li>  
+                    <a href="#go_OtherFeatures">
+                        Build in Features</a>
+                  </li>
                    
             </ul>
 
@@ -104,7 +110,7 @@
             <h2>What is QST2</h2>
             <p>
                 Quick SubD Toggle(QST) 2 is collection of <a href="#go_SubD" class="goTo">scripts</a> and <a href="#" class="goTo">feachers</a>
-                 for 3ds max that helps easy <b>subdivide/unsubdivide</b> models like in Maya(1 and 3 keys by default), Modo(Tab key by default) and Blender.     
+                 for 3ds max that helps easy <b>subdivide/unsubdivide</b> models like in Maya(1 and 3 keys by default), MODO(Tab key by default).     
             </p>
             <div>
                 <ul>
@@ -139,8 +145,8 @@
             </div>
 
             <div class="videoBlock">
-                <iframe width="420" height="315"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <iframe 
+                     src="https://www.youtube.com/embed/tgbNymZ7vqY">
                 </iframe>
             </div>
              <!--Install-->
@@ -148,18 +154,17 @@
             <div>
                 <ul>
                     <li>3ds max <b>2016+ required</b>. Make sure 3ds max runs <b>not in admin mode</b></li>
-                    <li>Drag & Drop <b>*.mzp</b> file in 3ds max viewport</li>
+                    <li>Drag & Drop <a href="https://gumroad.com/dmitry_gubkin" target="_blank" rel="noopener noreferrer" class="goTo">*.mzp</a> file in 3ds max viewport</li>
                     <li>Hit <b>Install</b> or <b>UnInstall</b></li>
                     <li>Go to <b>Customize -> Customize User Interface</b>, choose <b>"Quick SubD Toggle"</b> in the <b>Category</b> list and use it!</li>
 
                 </ul>
                 <div class="gifBlock">
-                    <div>
-                        <img src="content/gif/qst2_install.gif" width="500"  alt="">
-                    </div>
-                    <div> 
-                        <img src="content/gif/qst2_category.gif" width="500"  alt="">
-                    </div>
+                    
+                        <img src="content/gif/qst2_install.gif"  alt="">
+                    
+                        <img src="content/gif/qst2_category.gif" alt="">
+                    
                 </div>
             </div>
 
@@ -168,24 +173,35 @@
              <!--SubD-->
             <div>
                 <h2>
-                    SubD (Maya style)<a name="go_SubD" class="goToHead"></a>
+                    SubD (<a href="https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/Maya-Modeling/files/GUID-4863E5AE-0EA0-4596-B1AE-10C19603838E-htm.html"
+                     target="_blank" rel="noopener noreferrer">
+                        Maya style, default hotkey in Maya - 3</a>)<a name="go_SubD" class="goToHead"></a>
                 </h2>
                 <img src="content/image/QST2_SubD_ico.png" alt="" class="header_ico">
 
                 <p>
-                    SubD script adds subdivision on selected objects, if you use working mode - <a href="#" class="goTo">"Modifier based"</a> it adds modifier on top of the stack, if 
+                    <b>SubD</b> script adds subdivision on selected objects, if you use working mode - <a href="#" class="goTo">"Modifier based"</a> it adds modifier on top of the stack, if 
                     <a href="#" class="goTo">"Hybrid"</a> and any of subobjects levels(vertex, edge..)
                      is active it adds NURMS subdivision(<b>NURMS works only if Editable_Poly in stack is selected</b>) other cases adds modifier.
                 </p>
+
+                <p>
+                    In <a href="#" class="goTo">"Hybrid"</a> working mode you can replace <b>NURMS subdivision to modifier</b>(any of subobjects levels of Editable_Poly should not be active) or 
+                    <b>modifier to NURMS subdivision</b>(any of subobjects levels of Editable_Poly should be active).
+                </p>
+
                 <p>
                     <b>When nothing is selected</b> you can <b>switch modifier type</b> to the next(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
-                    Script inform you about active modifier type and it iterations count at center bottomn of the viewport.
+                    Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
+                    <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
+                    target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
+                    opens <a href="#go_QSTSetting" class="goTo">QST Settings</a>.
                 </p>
                 <p>
                     <b>Setting per modifier type are unique</b> and you can change them directly in modifier panel. All <b>modifiers are instances</b>.
                 </p>
                 <p>
-                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>
+                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
                 </p>
                 <p>
                     Only one instance of <b>"Global_QSubD_Preview"</b> modifier can be applied per object. in <a href="#" class="goTo">"Hybrid"</a> mode you can apply only one modifier instance or only NURMS subdivision.
@@ -195,9 +211,9 @@
                 </p>
 
                 <div class="gifBlock">
-                    <div><img src="content/gif/qst2_SubD_01.gif" width="500"  alt=""></div>
-                    <div></span> <img src="content/gif/qst2_nonGeo_01.gif" width="500"  alt=""></div>
-                    <div> <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt=""></div>
+                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
+                    <img src="content/gif/qst2_nonGeo_01.gif" width="500"  alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
                 </div>
                                  
             </div>
@@ -206,19 +222,75 @@
             <!--UnSubD-->
             <div>
                 <h2>
-                    UnSubD<a name="go_UnSubD" class="goToHead"></a>
+                    UnSubD (<a href="https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/Maya-Modeling/files/GUID-4863E5AE-0EA0-4596-B1AE-10C19603838E-htm.html" 
+                    target="_blank" rel="noopener noreferrer">
+                        Maya style, default hotkey in Maya - 1</a>)<a name="go_UnSubD" class="goToHead"></a>
                 </h2>
                 <img src="content/image/QST2_UnSubD_ico.png" alt="" class="header_ico">
-                                 
+                
+                <p>
+                    <b>UnSubD</b> script removes subdivision on selected objects, if you use working mode - <a href="#" class="goTo">"Modifier based"</a> it removes - <b>"Global_QSubD_Preview"</b> modifiers, if 
+                    <a href="#" class="goTo">"Hybrid"</a> it removes <b>"Global_QSubD_Preview"</b> modifiers and NURMS subdivision.
+                </p>
+                <p>
+                    <b>When nothing is selected</b> you can <b>switch modifier type</b> to the next(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
+                    Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
+                    <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
+                    target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
+                    opens <a href="#go_QSTSetting" class="goTo">QST Settings</a>.
+                </p>
+
+                <p>
+                    This operation <b>not undoable</b>, run <a href="#go_SubD" class="goTo">SubD</a> or <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> script for adding subdivision.
+                </p>
+
+                <div class="gifBlock">
+                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                </div>
+
             </div>
             <div class="line"></div>
 
             <!--ToggSubD-->
             <div>
                 <h2>
-                    Toggle SubD<a name="go_ToggSubD" class="goToHead"></a>
+                    Toggle SubD (<a href="https://learn.foundry.com/modo/content/help/pages/modeling/edit_geometry/subdivide.html" 
+                    target="_blank" rel="noopener noreferrer">
+                    MODO style, default hotkey in MODO - Tab</a>)<a name="go_ToggSubD" class="goToHead"></a>
                 </h2>
                 <img src="content/image/QST2_ToggSubD_ico.png" alt="" class="header_ico">
+
+                <p>
+                    <b>Toggle SubD</b> script toggles(<a href="#go_SubD" class="goTo">SubD</a>/<a href="#go_SubD" class="goTo">UnSubD</a>) 
+                    subdivision on selected objects, if you use working mode - <a href="#" class="goTo">"Modifier based"</a> it toggles only - <b>"Global_QSubD_Preview"</b> modifiers, if 
+                    <a href="#" class="goTo">"Hybrid"</a> it toggles <b>"Global_QSubD_Preview"</b> modifiers and NURMS subdivision(<b>NURMS works only if Editable_Poly in stack is selected</b>).
+                </p>
+
+                <p>
+                    In <a href="#" class="goTo">"Hybrid"</a> working mode you can replace <b>NURMS subdivision to modifier</b>(any of subobjects levels of Editable_Poly should not be active) or 
+                    <b>modifier to NURMS subdivision</b>(any of subobjects levels of Editable_Poly should be active).
+                </p>
+                <p>
+                    <b>When nothing is selected</b> you can <b>switch modifier type</b> to the next(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
+                    Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
+                    <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
+                    target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
+                    opens <a href="#go_QSTSetting" class="goTo">QST Settings</a>.
+                </p>
+
+                <p>
+                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
+                </p>
+
+                <p>
+                    This operation <b>not undoable</b>, use <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> - to toggle subdivision back or <a href="#go_SubD" class="goTo">SubD</a> - to subdivide or <a href="#go_UnSubD" class="goTo">UnSubD</a> - to unsubdivide.
+                </p>
+
+                <div class="gifBlock">
+                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                </div>
                                  
             </div>
             <div class="line"></div>
@@ -255,7 +327,7 @@
                 <div class="QSTSettingUI_block">
 
                     <div class="contentCenter">
-                        <img src="content/image/Setting_UI_img_01.png" width="500"  alt="">
+                        <img src="content/image/Setting_UI_img_01.png" alt="">
                     </div>
                    
 
@@ -263,9 +335,11 @@
                         <h3>1.</h3>
                         <p>
                             <b>Selects</b> objects with subdivision or <b>Shows</b> SubD information in viewport using filters(type, hidded objects and proccessing source).
-                             <b>Show feature</b> processing  modifiers with specific  name <b>"Global_QSubD_Preview"</b>
+                             <b>Show feature</b> processing  modifiers with specific  name <b>"Global_QSubD_Preview"</b> and not deppentd of "SubD type filter"
                         </p>
-                        <div><img src="content/gif/qst2_show_select_01.gif"  alt="" width="600px"></div>
+                        <div class="gifBlock">
+                            <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                        </div>
                     </div>
 
                     <div>
@@ -274,10 +348,22 @@
                             <b>Selects</b> objects with subdivision or <b>Shows</b> SubD information in viewport using filters(type, hidded objects and proccessing source).
                              <b>Show feature</b> processing  modifiers with specific  name <b>"Global_QSubD_Preview"</b>
                         </p>
-                        <div><img src="content/gif/qst2_show_select_01.gif"  alt="" width="600px"></div>
+                        <div class="gifBlock">
+                            <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                        </div>
                     </div>
                                  
             </div>
+            <div class="line"></div>
+
+              <!--Build in -->
+            <div>
+                <h2>
+                    Build in Features<a name="go_OtherFeatures" class="goToHead"></a>
+                </h2>
+                            
+            </div>
+            
             <div class="line"></div>
             
         </div>
