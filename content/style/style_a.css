@@ -4,6 +4,10 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+*{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 
 p {
@@ -22,15 +26,16 @@ a:focus {
     transition: all 0.3s;
 }
 
-.navbar {
+.topbar {
+    display: flex;
+    z-index: 100;
     padding: 10px 10px;
-    background: #fff;
     border: none;
-    border-radius: 5px;
+
     margin-bottom: 20px;
     margin-top: -20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    align-items: baseline;
+    align-items: flex-start;
     flex-wrap: nowrap;
     
 }
@@ -44,11 +49,12 @@ a:focus {
     box-shadow: 0 1px 0 0 #4dd0e1;
   }
 
-.btn-info {
+ .btn-info{
     box-shadow: none;
     outline: none !important;
     border: none;
     margin-left: 1%;
+    margin-right: 10px;
 }
 
 .line {
@@ -73,7 +79,7 @@ a:focus {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     z-index: 999;
     background: rgb(9,121,93);
     background: linear-gradient(0deg, #09795d 0%, #09647b 100%);
@@ -103,7 +109,7 @@ a:focus {
     padding: 10px;
     font-size: 1.2em;
     display: block;
-    border-bottom: 1px solid #ffffff0f;
+    border-bottom: 1px solid #c0c0c044;
     
 }
 
@@ -163,14 +169,14 @@ ul.CTAs img {
 
 a.download {
     text-transform: uppercase;
-    background: #065061bf;
+    background: #065061;
     color: #f0f0f0;
-    border: 1px solid #b5facf63 !important;
+    border: 1px solid #9ac9ac !important;
 }
 a.download:hover {
     color: #ffffff;
-    background: #06506160 !important;
-    border: 1px solid #b5facf9a !important;
+    background: #07404d !important;
+    border: 1px solid #b5facf !important;
     transition: 0.2s linear;
 }
 
@@ -246,20 +252,9 @@ a.download:hover {
 }
 
 .videoBlock{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-}
-.videoBlock iframe{
-
-    min-width: 600px;
-    min-height: 450px;
+   width: 80vh;
 }
 
-.QSTSettingUI_block
-{ 
-    
-}
 
 .contentCenter{
     display: flex;
@@ -292,23 +287,27 @@ a.download:hover {
     width: 100%;
 }
 
+.QSTVersion{
+    color: #FF6138;
+    margin-bottom: -15px;
+    text-align: right;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+    
     #sidebar {
         margin-left: -250px;
+        z-index: 999;
     }
     #sidebar.active {
         margin-left: 0;
-        max-height: 100%;
     }
     #content {
         width: 100%;
-    }
-    #content.active {
-        width: calc(100% - 250px);
     }
     #sidebarCollapse span {
         display: none;
@@ -318,17 +317,16 @@ a.download:hover {
         max-width:100%;
         max-height: 100%;
     }
-
+    .topbar{
+       flex-direction: row-reverse;
+    }
     .gifBlock img{
         max-width:100%;
         max-height: 100%;
     }
-
-    .videoBlock iframe{
-        min-width: 400px;
-        min-height: 300px;
-    }
-
+    .videoBlock{
+        width: 100%;
+     }
     .contentCenter{
         max-width:100%;
         max-height: 100%;

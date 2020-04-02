@@ -27,11 +27,14 @@
 
     <div class="wrapper">
         <!-- Sidebar  -->
+        
+        <div>
         <nav id="sidebar">
             <div class="sidebar-header">
                 <h3>
                     <a href="#">QST2</a> <!--go top-->    
-                </h3>          
+                </h3> 
+                <div class="QSTVersion">V2.15</div>         
             </div>
 
             <ul class="list-unstyled components">
@@ -77,6 +80,11 @@
                     <a href="#go_OtherFeatures">
                         Build in Features</a>
                   </li>
+
+                  <li>  
+                    <a href="#go_QSTHistory">
+                        History</a>
+                  </li>
                    
             </ul>
 
@@ -95,18 +103,17 @@
                 
             </ul>
         </nav>
-
+    </div>
         <!-- Page Content  -->
         <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> 
-            <button type="button" id="sidebarCollapse" class="btn btn-info">
-               <i id="togg_ico" class="fas fa-align-justify"></i>
-            </button>  
-                <div class="md-form active-cyan active-cyan-2 mb-3">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-              </div>
-            </nav>
-
+            <nav class="topbar navbar-light bg-light sticky-top"> 
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                   <i id="togg_ico" class="fas fa-align-justify"></i>
+                </button>
+                <button type="button" id="btn_goup" class="btn btn-info">
+                    <i class="fas fa-angle-up"></i> 
+                 </button>
+                </nav>
             <h2>What is QST2</h2>
             <p>
                 Quick SubD Toggle(QST) 2 is collection of <a href="#go_SubD" class="goTo">scripts</a> and <a href="#" class="goTo">feachers</a>
@@ -144,8 +151,8 @@
                 </ul>
             </div>
 
-            <div class="videoBlock">
-                <iframe 
+            <div class="embed-responsive embed-responsive-16by9 videoBlock" >
+                <iframe class="embed-responsive-item"
                      src="https://www.youtube.com/embed/tgbNymZ7vqY">
                 </iframe>
             </div>
@@ -301,6 +308,29 @@
                     Safe to Poly<a name="go_SafeToPoly" class="goToHead"></a>
                 </h2>
                 <img src="content/image/QST2_SafeToPoly_ico.png" alt="" class="header_ico">
+
+                <p>
+                    <b>Safe to Poly</b> script converts selected object to Editable_Poly with reset XForm(hierarchy supports) option and preserved subdivision.
+                    In working mode "Modifier based"</a> it keeping only subD modifiers - <b>"Global_QSubD_Preview"</b>, in "Hybrid" - modifier and NURMS subdivision.
+                </p>
+
+                <p>
+                    <b>When nothing is selected</b> you can <b>toggle reset XForm option - ON/OFF</b>.
+                    Script inform you about status of reset XForm option at center bottomn of the viewport.
+                </p>
+
+                <p>
+                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
+                </p>
+
+                <p>
+                    You can undo this operation.
+                </p>
+
+                <div class="gifBlock">
+                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                </div>
                                  
             </div>
             <div class="line"></div>
@@ -311,6 +341,28 @@
                     Safe to Spline<a name="go_SafeToSpline" class="goToHead"></a>
                 </h2>
                 <img src="content/image/QST2_SafeToSpline_ico.png" alt="" class="header_ico">
+
+                <p>
+                    <b>Safe to Spline</b> script converts selected object to Editable_Spline with reset XForm(hierarchy supports) option and preserving subdivision.
+                </p>
+
+                <p>
+                    <b>When nothing is selected</b> you can <b>toggle reset XForm option - ON/OFF</b>.
+                    Script inform you about status of reset XForm option at center bottomn of the viewport.
+                </p>
+
+                <p>
+                    Spript process only objectsth based on splines, other object such as geometry, helpers and ... will be skipped.
+                </p>
+
+                <p>
+                    You can undo this operation.
+                </p>
+
+                <div class="gifBlock">
+                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                </div>
                                  
             </div>
             <div class="line"></div>
@@ -365,6 +417,15 @@
             </div>
             
             <div class="line"></div>
+
+            <div>
+                <h2>
+                    Versions History<a name="go_QSTHistory" class="goToHead"></a>
+                </h2>
+                            
+            </div>
+            
+            <div class="line"></div>
             
         </div>
     </div>
@@ -379,7 +440,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function () 
+        {
             $("#sidebar").mCustomScrollbar({
                 theme: "minimal"
             });
@@ -390,6 +452,11 @@
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                /// $("#togg_ico").toggleClass('fas fa-outdent fa-align-justify');
 
+            });
+
+            $('#btn_goup').on('click', function () {
+              
+                window.scrollTo(0,0)
             });
         });
     </script>
