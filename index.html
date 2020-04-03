@@ -25,7 +25,7 @@
 
 <body>
 
-    <div class="wrapper">
+    <div>
         <!-- Sidebar  -->
         
         <div>
@@ -440,17 +440,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script type="text/javascript">
+
+       function fn_togg_sidebar ()
+        {
+            $('#sidebar, #content').toggleClass('hide');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+
+          /*  if ($("#togg_ico").hasClass("fa-align-justify"))
+            {
+                $("#togg_ico").removeClass("fa-align-justify");
+                $("#togg_ico").addClass("fas fa-outdent");
+            }
+            else
+            {
+                $("#togg_ico").removeClass("fas fa-outdent");
+                $("#togg_ico").addClass("fa-align-justify");
+            }
+            */
+        };
+
+        function closeSideBar()
+        {
+            var element = document.querySelector('.topbar');
+            var style = getComputedStyle(element);
+
+             if (style.justifyContent == "flex-end")
+             {
+                fn_togg_sidebar();
+             };
+   
+        };
+
         $(document).ready(function () 
         {
             $("#sidebar").mCustomScrollbar({
                 theme: "minimal"
             });
 
+
             $('#sidebarCollapse').on('click', function () {
-                $('#sidebar, #content').toggleClass('active');
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-               /// $("#togg_ico").toggleClass('fas fa-outdent fa-align-justify');
+                
+               fn_togg_sidebar()
 
             });
 
@@ -458,6 +489,12 @@
               
                 window.scrollTo(0,0)
             });
+
+            $('#sidebar').on ('click', function () {
+                closeSideBar();
+            });
+
+           
         });
     </script>
 </body>

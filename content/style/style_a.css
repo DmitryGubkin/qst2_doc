@@ -27,16 +27,16 @@ a:focus {
 }
 
 .topbar {
-    display: flex;
-    z-index: 100;
+   
     padding: 10px 10px;
     border: none;
-
     margin-bottom: 20px;
     margin-top: -20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    align-items: flex-start;
+    display: flex;  
     flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
     
 }
 .md-form{
@@ -74,13 +74,13 @@ a:focus {
 }
 
 #sidebar {
+    z-index: 100;
     font-family: 'Roboto', sans-serif;
     width: 250px;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    z-index: 999;
+    height: 100vh;
     background: rgb(9,121,93);
     background: linear-gradient(0deg, #09795d 0%, #09647b 100%);
     color: #fff;
@@ -88,7 +88,7 @@ a:focus {
     box-shadow: 1px 1px 3px #2c2c2c56;
 }
 
-#sidebar.active {
+#sidebar.hide {
     margin-left: -250px;
 }
 
@@ -185,6 +185,7 @@ a.download:hover {
 ----------------------------------------------------- */
 
 #content {
+    z-index: 90;
     width: calc(100% - 270px);
     padding: 40px;
     min-height: 100vh;
@@ -272,7 +273,7 @@ a.download:hover {
 
 .gifBlock {
     display: flex;
-    flex-wrap: nowrap;    
+    flex-wrap: wrap;    
     align-items: flex-start;
     
 }
@@ -283,7 +284,7 @@ a.download:hover {
     max-height: 450px;
 }
 
-#content.active {
+#content.hide {
     width: 100%;
 }
 
@@ -297,28 +298,26 @@ a.download:hover {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 768px ){
     
     #sidebar {
         margin-left: -250px;
-        z-index: 999;
+        
     }
-    #sidebar.active {
-        margin-left: 0;
+    #sidebar.hide {
+
+        margin-left: 0; 
     }
+
     #content {
         width: 100%;
+        
     }
     #sidebarCollapse span {
         display: none;
     }
-    .gifBlock{
-        flex-wrap: wrap;
-        max-width:100%;
-        max-height: 100%;
-    }
     .topbar{
-       flex-direction: row-reverse;
+      justify-content: flex-end;
     }
     .gifBlock img{
         max-width:100%;
