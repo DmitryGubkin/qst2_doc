@@ -24,6 +24,7 @@ a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
+    
 }
 
 .topbar {
@@ -109,17 +110,15 @@ a:focus {
     padding: 10px;
     font-size: 1.2em;
     display: block;
-    border-bottom: 1px solid #c0c0c044;
+    border-bottom: 1px solid #5c848a;
     
 }
 
 #sidebar ul li a:hover {
-    background: #bbbbbb28;
+    background: hsla(0, 0%, 73%, 0.157);
     border-left: 10px solid #FF6138;
 
 }
-
-
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -134,10 +133,10 @@ a[data-toggle="collapse"] {
 }
 
 .menu_ico{
-    border: 1px solid #ffffff7e;
+    border: 1px solid #929292;
     border-radius: 4px;
     width: 26px;
-    background-color: #3636365b;
+    background-color: rgba(54, 54, 54, 0.357);
 }
 
 
@@ -169,14 +168,14 @@ ul.CTAs img {
 
 a.download {
     text-transform: uppercase;
-    background: #065061;
+    background: #0c505a;
     color: #f0f0f0;
-    border: 1px solid #9ac9ac !important;
+    border: 1px solid #cccccc !important;
 }
 a.download:hover {
     color: #ffffff;
-    background: #07404d !important;
-    border: 1px solid #b5facf !important;
+    background: #0b4852 !important;
+    border: 1px solid #ffffff !important;
     transition: 0.2s linear;
 }
 
@@ -210,7 +209,7 @@ a.download:hover {
 #content h2::after {
     content: "";
     display: block;
-    background-color: #1e9ab9c2;
+    background-color: #1e9ab9;
     height: 2px;
     width: 100%;
     margin-top: 10px;
@@ -272,18 +271,26 @@ a.download:hover {
 }
 
 .gifBlock {
-    display: flex;
-    flex-wrap: wrap;    
-    align-items: flex-start;
     
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: flex-start;
 }
+
 .gifBlock img{
-
     margin-right: 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
-    max-height: 450px;
+    max-width: 450px;
+    min-width: 200px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 3px;
 }
-
+.gifBlock img:hover{
+    cursor: pointer;
+    border-color:#1e9ab9;
+}
 #content.hide {
     width: 100%;
 }
@@ -292,6 +299,25 @@ a.download:hover {
     color: #FF6138;
     margin-bottom: -15px;
     text-align: right;
+}
+.Important_info{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #45b376;
+    border-left: 30px solid #38b470;
+    border-radius: 2px;
+}
+.Important_info-warning{
+    border: 1px solid #ff9277 !important;
+    border-left: 30px solid #ff6f4b !important;
+}
+.Important_info p{
+   margin-left: 20px;
+   margin-right: 20px;
 }
 
 /* ---------------------------------------------------

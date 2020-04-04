@@ -187,40 +187,41 @@
                 <img src="content/image/QST2_SubD_ico.png" alt="" class="header_ico">
 
                 <p>
-                    <b>SubD</b> script adds subdivision on selected objects, if you use working mode - <a href="#" class="goTo">"Modifier based"</a> it adds modifier on top of the stack, if 
-                    <a href="#" class="goTo">"Hybrid"</a> and any of subobjects levels(vertex, edge..)
-                     is active it adds NURMS subdivision(<b>NURMS works only if Editable_Poly in stack is selected</b>) other cases adds modifier.
+                    <b>SubD</b> script - adds subdivision on selected objects. When <a href="#" class="goTo">working mode</a> - "Modifier based" it adds <a href="#go_QSTSetting" class="goTo">"Global_QSubD_Preview"</a> modifier on top of the stack.
+                    If working mode -"Hybrid" and any subobject level(vertex, edge..) in Editable Poly is active it adds NURMS subdivision, other cases -modifier.
                 </p>
 
                 <p>
-                    In <a href="#" class="goTo">"Hybrid"</a> working mode you can replace <b>NURMS subdivision to modifier</b>(any of subobjects levels of Editable_Poly should not be active) or 
-                    <b>modifier to NURMS subdivision</b>(any of subobjects levels of Editable_Poly should be active).
+                    In "Hybrid" working mode you can replace <b>NURMS subdivision to modifier</b>(any of subobjects levels of Editable Poly should not be active) or 
+                    <b>modifier to NURMS subdivision</b>(any of subobjects levels of Editable Poly is active).
                 </p>
 
                 <p>
-                    <b>When nothing is selected</b> you can <b>switch modifier type</b> to the next(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
+                    <b>When nothing is selected</b> you can <b>switch between modifiers types</b>(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
                     Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
                     <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
                     target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
                     opens <a href="#go_QSTSetting" class="goTo">QST Settings</a>.
                 </p>
                 <p>
-                    <b>Setting per modifier type are unique</b> and you can change them directly in modifier panel. All <b>modifiers are instances</b>.
+                    <b>Setting per modifier type are unique</b> and you can change them directly in modifier panel. All modifiers per type <b>are instances</b> .
+                </p>
+                <p>
+                    <b>Only one instance</b> of <a href="#go_QSTSetting" class="goTo">"Global_QSubD_Preview"</a> modifier can be applied per object. in <a href="#" class="goTo">"Hybrid"</a> mode you can apply only one modifier instance or only NURMS subdivision.
                 </p>
                 <p>
                     <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
                 </p>
-                <p>
-                    Only one instance of <b>"Global_QSubD_Preview"</b> modifier can be applied per object. in <a href="#" class="goTo">"Hybrid"</a> mode you can apply only one modifier instance or only NURMS subdivision.
-                </p>
-                <p>
-                    This operation <b>not undoable</b>, run <a href="#go_UnSubD" class="goTo">UnSubD</a> or <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> script for removing subdivision.
-                </p>
-
+                <div class = "Important_info Important_info-warning">
+                    <p>
+                        This operation is <b>not undoable</b>. Use <a href="#go_UnSubD" class="goTo">UnSubD</a> or <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> script for removing subdivision.
+                    </p>
+                </div>
+               
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
-                    <img src="content/gif/qst2_nonGeo_01.gif" width="500"  alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                    <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                    <img src="content/gif/qst2_nonGeo_01.gif"   alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif"   alt="">
                 </div>
                                  
             </div>
@@ -236,24 +237,26 @@
                 <img src="content/image/QST2_UnSubD_ico.png" alt="" class="header_ico">
                 
                 <p>
-                    <b>UnSubD</b> script removes subdivision on selected objects, if you use working mode - <a href="#" class="goTo">"Modifier based"</a> it removes - <b>"Global_QSubD_Preview"</b> modifiers, if 
-                    <a href="#" class="goTo">"Hybrid"</a> it removes <b>"Global_QSubD_Preview"</b> modifiers and NURMS subdivision.
+                    <b>UnSubD</b> script - removes subdivision on selected objects. When <a href="#" class="goTo">working mode</a> - "Modifier based" it removes - <a href="#" class="goTo">"Global_QSubD_Preview"</a> modifiers, 
+                    "Hybrid" - removes modifiers and NURMS subdivision.
                 </p>
                 <p>
-                    <b>When nothing is selected</b> you can <b>switch modifier type</b> to the next(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
+                    <b>When nothing is selected</b> you can <b>switch between modifiers types</b>(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
                     Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
                     <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
                     target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
                     opens <a href="#go_QSTSetting" class="goTo">QST Settings</a>.
                 </p>
 
-                <p>
-                    This operation <b>not undoable</b>, run <a href="#go_SubD" class="goTo">SubD</a> or <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> script for adding subdivision.
-                </p>
+                <div class = "Important_info Important_info-warning">
+                    <p>
+                        This operation is <b>not undoable</b>. Use  <a href="#go_SubD" class="goTo">SubD</a> or <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> script for adding subdivision.
+                    </p>
+                </div>
 
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                    <img src="content/gif/qst2_SubD_01.gif"  alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif" alt="">
                 </div>
 
             </div>
@@ -269,17 +272,17 @@
                 <img src="content/image/QST2_ToggSubD_ico.png" alt="" class="header_ico">
 
                 <p>
-                    <b>Toggle SubD</b> script toggles(<a href="#go_SubD" class="goTo">SubD</a>/<a href="#go_SubD" class="goTo">UnSubD</a>) 
-                    subdivision on selected objects, if you use working mode - <a href="#" class="goTo">"Modifier based"</a> it toggles only - <b>"Global_QSubD_Preview"</b> modifiers, if 
-                    <a href="#" class="goTo">"Hybrid"</a> it toggles <b>"Global_QSubD_Preview"</b> modifiers and NURMS subdivision(<b>NURMS works only if Editable_Poly in stack is selected</b>).
+                    <b>Toggle SubD</b> script (<a href="#go_SubD" class="goTo">SubD</a>/<a href="#go_SubD" class="goTo">UnSubD</a>) 
+                     - toggles subdivision on selected objects. When <a href="#" class="goTo">working mode</a> - "Modifier based" it toggles only - <a href="#go_QSTSetting" class="goTo">"Global_QSubD_Preview"</a> modifiers, 
+                    "Hybrid" - toggles modifiers and NURMS subdivision. Add NURMS subdivision possible only when any subobject level of Editable Poly is active.
                 </p>
 
                 <p>
-                    In <a href="#" class="goTo">"Hybrid"</a> working mode you can replace <b>NURMS subdivision to modifier</b>(any of subobjects levels of Editable_Poly should not be active) or 
-                    <b>modifier to NURMS subdivision</b>(any of subobjects levels of Editable_Poly should be active).
+                    In "Hybrid" working mode you can replace <b>NURMS subdivision to modifier</b>(any of subobjects levels of Editable Poly should not be active) or 
+                    <b>modifier to NURMS subdivision</b>(any of subobjects levels of Editable Poly is active).
                 </p>
                 <p>
-                    <b>When nothing is selected</b> you can <b>switch modifier type</b> to the next(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
+                    <b>When nothing is selected</b> you can <b>switch between modifiers types</b>(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
                     Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
                     <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
                     target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
@@ -287,16 +290,21 @@
                 </p>
 
                 <p>
-                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
+                    <b>Only one instance</b> of <a href="#go_QSTSetting" class="goTo">"Global_QSubD_Preview"</a> modifier can be applied per object. in <a href="#" class="goTo">"Hybrid"</a> mode you can apply only one modifier instance or only NURMS subdivision.
                 </p>
 
                 <p>
-                    This operation <b>not undoable</b>, use <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> - to toggle subdivision back or <a href="#go_SubD" class="goTo">SubD</a> - to subdivide or <a href="#go_UnSubD" class="goTo">UnSubD</a> - to unsubdivide.
+                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
                 </p>
+                <div class = "Important_info Important_info-warning">
+                    <p>
+                        This operation <b>not undoable</b>, use <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> - to toggle subdivision back, <a href="#go_SubD" class="goTo">SubD</a> - to subdivide or <a href="#go_UnSubD" class="goTo">UnSubD</a> - to unsubdivide.
+                    </p>
+                </div>
 
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                    <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif" alt="">
                 </div>
                                  
             </div>
@@ -328,8 +336,8 @@
                 </p>
 
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                    <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif" alt="">
                 </div>
                                  
             </div>
@@ -360,8 +368,8 @@
                 </p>
 
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif" width="500"  alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif"  width="200px" alt="">
+                    <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                    <img src="content/gif/qst2_SwitchSubD_01.gif"  alt="">
                 </div>
                                  
             </div>
@@ -485,16 +493,21 @@
 
             });
 
-            $('#btn_goup').on('click', function () {
+            $('#btn_goup').on('click', function () { //go home
               
                 window.scrollTo(0,0)
             });
 
-            $('#sidebar').on ('click', function () {
+            $('#sidebar').on ('click', function () { 
                 closeSideBar();
             });
 
-           
+            $('.gifBlock img').on ('click', function () { //open gif in new tab to view it
+                $(this).each(function()
+               {
+                window.open($(this).prop("src"))
+               });
+            });
         });
     </script>
 </body>
