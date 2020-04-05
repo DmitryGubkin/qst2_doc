@@ -34,6 +34,7 @@ a:focus {
     margin-bottom: 20px;
     margin-top: -20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
     display: flex;  
     flex-wrap: nowrap;
     flex-direction: row;
@@ -194,12 +195,6 @@ a.download:hover {
     right: 0;
 }
 
-#content h3 {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color:#2bbd91;
-}
-
 #content h2 {
     color: #1e9ab9;
     margin-top: 40px;
@@ -216,12 +211,18 @@ a.download:hover {
     
 }
 
+#content h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color:#2bbd91;
+}
+
 #content h3::after {
     content: "";
     display: block;
     background-color: #30d8a6;
     height: 2px;
-    width: 80%;
+    width: 90%;
     margin-top: 10px;
     
 }
@@ -260,8 +261,7 @@ a.download:hover {
     display: flex;
     flex-wrap: nowrap;    
     align-content: center;
-    justify-content: center;
-    
+    justify-content: center;  
    
 }
 
@@ -318,6 +318,32 @@ a.download:hover {
    margin-left: 20px;
    margin-right: 20px;
 }
+.nav_Block{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;    
+    font-size: 1.4em;
+    text-align: center;
+    color: #f1f1f1;
+    background-color: #f7f7f7;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+
+}
+
+.nav_Block .item{
+    margin: 10px 5px;
+    background-color: #2bbd91;
+    padding: 0px 10px;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+.nav_Block .item:hover{
+    border: 2px solid#41d3a7;
+    background-color: #29a580;
+}
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -351,14 +377,14 @@ a.download:hover {
     .videoBlock{
         width: 100%;
      }
-    .contentCenter{
-        max-width:100%;
-        max-height: 100%;
-    }
 
     .contentCenter img{
         max-width:100%;
         max-height: 100%;
+    }
+    .nav_Block{
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 }
 @media(oorientation: landscape) /*keep original layout*/
