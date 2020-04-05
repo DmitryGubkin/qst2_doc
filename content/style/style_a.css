@@ -361,7 +361,7 @@ a.download:hover {
         max-height: 100%;
     }
 }
-@media(oorientation: landscape) /*keep oriign layout*/
+@media(oorientation: landscape) /*keep original layout*/
 {
     
 }
