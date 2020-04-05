@@ -86,7 +86,7 @@ a:focus {
     background: linear-gradient(0deg, #09795d 0%, #09647b 100%);
     color: #fff;
     transition: all 0.3s;
-    box-shadow: 1px 1px 3px #2c2c2c56;
+    box-shadow: 1px 1px 3px rgba(44, 44, 44, 0.337);
 }
 
 #sidebar.hide {
@@ -284,7 +284,7 @@ a.download:hover {
     margin-bottom: 10px;
     max-width: 450px;
     min-width: 200px;
-    border: 2px solid rgba(255, 255, 255, 0);
+    border: 3px solid rgba(255, 255, 255, 0);
     border-radius: 3px;
 }
 .gifBlock img:hover{
@@ -301,14 +301,13 @@ a.download:hover {
     text-align: right;
 }
 .Important_info{
-    display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #f7f7f7;
-    border: 1px solid #45b376;
-    border-left: 30px solid #38b470;
+    border: 1px solid #2bbd91;
+    border-left: 30px solid #2bbd91;
     border-radius: 2px;
 }
 .Important_info-warning{
@@ -361,4 +360,8 @@ a.download:hover {
         max-width:100%;
         max-height: 100%;
     }
+}
+@media(oorientation: landscape) /*keep oriign layout*/
+{
+    
 }

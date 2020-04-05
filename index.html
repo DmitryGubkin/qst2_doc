@@ -38,6 +38,23 @@
             </div>
 
             <ul class="list-unstyled components">
+
+                <!-- drop down tamplate
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                -->
                     <li>
                         <a href="#go_Install">Install & Uninstall</a>
                     </li>
@@ -111,9 +128,9 @@
                    <i id="togg_ico" class="fas fa-align-justify"></i>
                 </button>
                 <button type="button" id="btn_goup" class="btn btn-info">
-                    <i class="fas fa-angle-up"></i> 
+                    <i class="fas fa-arrow-up"></i> 
                  </button>
-                </nav>
+            </nav>
             <h2>What is QST2</h2>
             <p>
                 Quick SubD Toggle(QST) 2 is collection of <a href="#go_SubD" class="goTo">scripts</a> and <a href="#" class="goTo">feachers</a>
@@ -122,7 +139,7 @@
             <div>
                 <ul>
                     <li>
-                        Converting to Editable_Poly/Editable_Spline with <b>reset XForm(hierarchy supports)</b> and <b>preserving subdivision</b>
+                        Converting to Editable Poly/Editable Spline with <b>reset XForm(hierarchy supports)</b> and <b>preserving subdivision</b>
                     </li>
                     <li>
                         Supporting <b>modifier based</b> (TurboSmooth, OpenSubdiv, MeshSmooth) and <b>NURMS based</b> subdivision
@@ -198,7 +215,7 @@
 
                 <p>
                     <b>When nothing is selected</b> you can <b>switch between modifiers types</b>(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
-                    Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
+                    Script inform you about active modifier type and it iterations count at center bottom of the viewport. Option box in 
                     <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
                     target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
                     opens <a href="#go_QSTSetting" class="goTo">QST Settings</a>.
@@ -210,7 +227,7 @@
                     <b>Only one instance</b> of <a href="#go_QSTSetting" class="goTo">"Global_QSubD_Preview"</a> modifier can be applied per object. in <a href="#" class="goTo">"Hybrid"</a> mode you can apply only one modifier instance or only NURMS subdivision.
                 </p>
                 <p>
-                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
+                    <b>Non geometric</b> splines and other non geometric objects will <b>be skipped</b>.
                 </p>
                 <div class = "Important_info Important_info-warning">
                     <p>
@@ -242,7 +259,7 @@
                 </p>
                 <p>
                     <b>When nothing is selected</b> you can <b>switch between modifiers types</b>(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
-                    Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
+                    Script inform you about active modifier type and it iterations count at center bottom of the viewport. Option box in 
                     <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
                     target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
                     opens <a href="#go_QSTSetting" class="goTo">QST Settings</a>.
@@ -283,7 +300,7 @@
                 </p>
                 <p>
                     <b>When nothing is selected</b> you can <b>switch between modifiers types</b>(->TurboSmooth->OpenSubdiv->MeshSmooth->). 
-                    Script inform you about active modifier type and it iterations count at center bottomn of the viewport. Option box in 
+                    Script inform you about active modifier type and it iterations count at center bottom of the viewport. Option box in 
                     <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/3DSMax-Basics/files/GUID-3A803F43-6F87-40FB-97CA-33844078AF9A-htm.html" 
                     target="_blank" rel="noopener noreferrer" class="goTo">quad menu</a>
                     opens <a href="#go_QSTSetting" class="goTo">QST Settings</a>.
@@ -294,11 +311,11 @@
                 </p>
 
                 <p>
-                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
+                    <b>Non geometric</b> splines and other non geometric objects will <b>be skipped</b>.
                 </p>
                 <div class = "Important_info Important_info-warning">
                     <p>
-                        This operation <b>not undoable</b>, use <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> - to toggle subdivision back, <a href="#go_SubD" class="goTo">SubD</a> - to subdivide or <a href="#go_UnSubD" class="goTo">UnSubD</a> - to unsubdivide.
+                        This operation is <b>not undoable</b>, use <a href="#go_ToggSubD" class="goTo">Toggle SubD</a> - to toggle subdivision back, <a href="#go_SubD" class="goTo">SubD</a> - to subdivide or <a href="#go_UnSubD" class="goTo">UnSubD</a> - to unsubdivide.
                     </p>
                 </div>
 
@@ -318,22 +335,24 @@
                 <img src="content/image/QST2_SafeToPoly_ico.png" alt="" class="header_ico">
 
                 <p>
-                    <b>Safe to Poly</b> script converts selected object to Editable_Poly with reset XForm(hierarchy supports) option and preserved subdivision.
-                    In working mode "Modifier based"</a> it keeping only subD modifiers - <b>"Global_QSubD_Preview"</b>, in "Hybrid" - modifier and NURMS subdivision.
+                    <b>Safe to Poly</b> script - converts selected object to Editable Poly with reset XForm(hierarchy supports) option and preserving subdivision.
+                    In <a href="#" class="goTo">working mode</a> "Modifier based"</a> it keeping only <b>"Global_QSubD_Preview"</b> modifiers, in "Hybrid" - modifiers and NURMS subdivision.
                 </p>
 
                 <p>
                     <b>When nothing is selected</b> you can <b>toggle reset XForm option - ON/OFF</b>.
-                    Script inform you about status of reset XForm option at center bottomn of the viewport.
+                    Script inform you about status of reset XForm option at center bottom of the viewport.
                 </p>
 
                 <p>
-                    <b>Non geometry</b> splines and other non geometry objects will <b>be skipped</b>.
+                    <b>Non geometric</b> splines and other non geometric objects will <b>be skipped</b>.
                 </p>
 
-                <p>
-                    You can undo this operation.
-                </p>
+                <div class = "Important_info">
+                    <p>
+                        You can <b>undo</b> this operation.
+                    </p>
+                </div>
 
                 <div class="gifBlock">
                     <img src="content/gif/qst2_SubD_01.gif"   alt="">
@@ -351,21 +370,23 @@
                 <img src="content/image/QST2_SafeToSpline_ico.png" alt="" class="header_ico">
 
                 <p>
-                    <b>Safe to Spline</b> script converts selected object to Editable_Spline with reset XForm(hierarchy supports) option and preserving subdivision.
+                    <b>Safe to Spline</b> script - converts selected object to Editable Spline with reset XForm(hierarchy supports) option and preserving subdivision.
                 </p>
 
                 <p>
                     <b>When nothing is selected</b> you can <b>toggle reset XForm option - ON/OFF</b>.
-                    Script inform you about status of reset XForm option at center bottomn of the viewport.
+                    Script inform you about status of reset XForm option at center bottom of the viewport.
                 </p>
 
                 <p>
-                    Spript process only objectsth based on splines, other object such as geometry, helpers and ... will be skipped.
+                    <b>Non-spline</b> objects will <b>be skipped</b>.
                 </p>
 
-                <p>
-                    You can undo this operation.
-                </p>
+                <div class = "Important_info">
+                    <p>
+                        You can <b>undo</b> this operation.
+                    </p>
+                </div>
 
                 <div class="gifBlock">
                     <img src="content/gif/qst2_SubD_01.gif"   alt="">
@@ -438,6 +459,8 @@
         </div>
     </div>
 
+
+    
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
@@ -447,25 +470,16 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
+    
+    
     <script type="text/javascript">
 
+        
        function fn_togg_sidebar ()
         {
             $('#sidebar, #content').toggleClass('hide');
             $('.collapse.in').toggleClass('in');
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-
-          /*  if ($("#togg_ico").hasClass("fa-align-justify"))
-            {
-                $("#togg_ico").removeClass("fa-align-justify");
-                $("#togg_ico").addClass("fas fa-outdent");
-            }
-            else
-            {
-                $("#togg_ico").removeClass("fas fa-outdent");
-                $("#togg_ico").addClass("fa-align-justify");
-            }
-            */
         };
 
         function closeSideBar()
@@ -474,10 +488,13 @@
             var style = getComputedStyle(element);
 
              if (style.justifyContent == "flex-end")
-             {
-                fn_togg_sidebar();
+             { 
+               if ($('#sidebar').hasClass('hide'))
+               {
+                    fn_togg_sidebar();
+               };
+              
              };
-   
         };
 
         $(document).ready(function () 
@@ -489,25 +506,31 @@
 
             $('#sidebarCollapse').on('click', function () {
                 
-               fn_togg_sidebar()
+               fn_togg_sidebar();
 
             });
 
             $('#btn_goup').on('click', function () { //go home
               
-                window.scrollTo(0,0)
+                window.scrollTo(0,0);
             });
 
-            $('#sidebar').on ('click', function () { 
-                closeSideBar();
+            $('#sidebar').on ('click', function (event) {  
+                var element = $(event.target);
+                if ( element.hasClass('dropdown-toggle') == false)
+                {
+                    closeSideBar();
+                };
             });
 
             $('.gifBlock img').on ('click', function () { //open gif in new tab to view it
                 $(this).each(function()
                {
-                window.open($(this).prop("src"))
+                window.open($(this).prop("src"));
                });
             });
+
+            
         });
     </script>
 </body>
