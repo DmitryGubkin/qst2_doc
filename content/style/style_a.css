@@ -1,6 +1,4 @@
-/*
-    DEMO STYLE
-*/
+
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
@@ -39,6 +37,10 @@ a:focus {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 101;
     
 }
 .md-form{
@@ -76,7 +78,7 @@ a:focus {
 }
 
 #sidebar {
-    z-index: 100;
+    z-index: 999;
     font-family: 'Roboto', sans-serif;
     width: 250px;
     position: fixed;
@@ -185,7 +187,7 @@ a.download:hover {
 ----------------------------------------------------- */
 
 #content {
-    z-index: 90;
+    z-index: 100;
     width: calc(100% - 270px);
     padding: 40px;
     min-height: 100vh;
@@ -345,6 +347,20 @@ a.download:hover {
     background-color: #29a580;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.overlay.active {
+    display: none;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -361,9 +377,9 @@ a.download:hover {
     }
 
     #content {
-        width: 100%;
-        
+        width: 100%; 
     }
+
     #sidebarCollapse span {
         display: none;
     }
@@ -384,7 +400,13 @@ a.download:hover {
     }
     .nav_Block{
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: baseline;
+        
+    }
+
+    .overlay.active {
+        display: block;
+        opacity: 1;
     }
 }
 @media(oorientation: landscape) /*keep original layout*/

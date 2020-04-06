@@ -19,8 +19,8 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <!--https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/Maya-Modeling/files/GUID-4863E5AE-0EA0-4596-B1AE-10C19603838E-htm.html-->
-
+    <!--Page script-->
+    <script src="content/js/main_page_01.js"></script>
 </head>
 
 <body>
@@ -123,7 +123,7 @@
     </div>
         <!-- Page Content  -->
         <div id="content">
-            <nav class="topbar navbar-expand-lg navbar-light bg-light sticky-top"> 
+            <nav class="topbar  navbar-light bg-light" id="navbar"> 
                 <button type="button" id="sidebarCollapse" class="btn btn-info">
                    <i id="togg_ico" class="fas fa-align-justify"></i>
                 </button>
@@ -497,9 +497,11 @@
             
         </div>
     </div>
-
-
     
+    <!--overlay content-->
+    <div class="overlay"></div>
+  
+
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
@@ -509,32 +511,7 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-    
-    
     <script type="text/javascript">
-
-        
-       function fn_togg_sidebar ()
-        {
-            $('#sidebar, #content').toggleClass('hide');
-            $('.collapse.in').toggleClass('in');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        };
-
-        function closeSideBar()
-        {
-            var element = document.querySelector('.topbar');
-            var style = getComputedStyle(element);
-
-             if (style.justifyContent == "flex-end")
-             { 
-               if ($('#sidebar').hasClass('hide'))
-               {
-                    fn_togg_sidebar();
-               };
-              
-             };
-        };
 
         $(document).ready(function () 
         {
@@ -543,10 +520,8 @@
             });
 
 
-            $('#sidebarCollapse').on('click', function () {
-                
+            $('#sidebarCollapse').on('click', function () { 
                fn_togg_sidebar();
-
             });
 
             $('#btn_goup').on('click', function () { //go home
@@ -562,14 +537,21 @@
                 };
             });
 
-            $('.gifBlock img').on ('click', function () { //open gif in new tab to view it
+            $('.gifBlock img').on ('click', function () { //open gif in new tab
                 $(this).each(function()
                {
                 window.open($(this).prop("src"));
                });
             });
 
-            
+            $('.overlay').on ('click', function () { //overlay screen on @media devices when sidebar visible
+               if ($(this).hasClass('active'))
+               {
+                closeSideBar();
+               };
+               
+            });
+
         });
     </script>
 </body>
