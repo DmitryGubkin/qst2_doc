@@ -197,6 +197,10 @@ a.download:hover {
     right: 0;
 }
 
+#content li {
+    font-size: 1.1em;
+}
+
 #content h2 {
     color: #1e9ab9;
     margin-top: 40px;
@@ -280,10 +284,13 @@ a.download:hover {
     align-items: flex-start;
 }
 
-.gifBlock img{
+.gifBlock figure{
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.gifBlock img{
     max-width: 450px;
     min-width: 200px;
     border: 3px solid rgba(255, 255, 255, 0);
@@ -293,6 +300,12 @@ a.download:hover {
     cursor: pointer;
     border-color:#1e9ab9;
 }
+
+.gifBlock figcaption{
+    text-align: center;
+}
+
+
 #content.hide {
     width: 100%;
 }
@@ -323,6 +336,7 @@ a.download:hover {
 .nav_Block{
     display: flex;
     margin-top: 20px;
+    margin-bottom: 20px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;    

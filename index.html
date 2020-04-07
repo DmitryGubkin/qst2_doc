@@ -236,9 +236,18 @@
                 </div>
                
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif"   alt="">
-                    <img src="content/gif/qst2_nonGeo_01.gif"   alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif"   alt="">
+                    <figure>
+                        <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                        <figcaption>QST in action</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="content/gif/qst2_nonGeo_01.gif"   alt="">
+                        <figcaption>Skipping non geometric objects</figcaption>
+                    </figure> 
+                    <figure>
+                        <img src="content/gif/qst2_SwitchSubD_01.gif"  alt="">
+                        <figcaption>Switch modifier type</figcaption>
+                    </figure> 
                 </div>
                                  
             </div>
@@ -272,8 +281,14 @@
                 </div>
 
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif"  alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif" alt="">
+                    <figure>
+                        <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                        <figcaption>QST in action</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="content/gif/qst2_SwitchSubD_01.gif"  alt="">
+                        <figcaption>Switch modifier type</figcaption>
+                    </figure> 
                 </div>
 
             </div>
@@ -320,8 +335,14 @@
                 </div>
 
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif"   alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif" alt="">
+                    <figure>
+                        <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                        <figcaption>QST in action</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="content/gif/qst2_SwitchSubD_01.gif"  alt="">
+                        <figcaption>Switch modifier type</figcaption>
+                    </figure> 
                 </div>
                                  
             </div>
@@ -355,8 +376,14 @@
                 </div>
 
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif"   alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif" alt="">
+                    <figure>
+                        <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                        <figcaption>QST in action</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="content/gif/qst2_SwitchSubD_01.gif"  alt="">
+                        <figcaption>Switch modifier type</figcaption>
+                    </figure>  
                 </div>
                                  
             </div>
@@ -389,8 +416,14 @@
                 </div>
 
                 <div class="gifBlock">
-                    <img src="content/gif/qst2_SubD_01.gif"   alt="">
-                    <img src="content/gif/qst2_SwitchSubD_01.gif"  alt="">
+                    <figure>
+                        <img src="content/gif/qst2_SubD_01.gif"   alt="">
+                        <figcaption>QST in action</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="content/gif/qst2_SwitchSubD_01.gif"  alt="">
+                        <figcaption>Switch modifier type</figcaption>
+                    </figure>                    
                 </div>
                                  
             </div>
@@ -449,6 +482,12 @@
                        </a>                       
                    </div>
 
+                   <div class = "Important_info">
+                    <p>
+                        Hover over the QST UI element in 3ds Max to see what it does.
+                    </p>
+                    </div>
+                    
                     <div>
                         <h3>
                             1<a name="go_Settings_01" class="goToHead"></a>
@@ -458,18 +497,47 @@
                              <b>Show feature</b> processing  modifiers with specific  name - <b>"Global_QSubD_Preview"</b> and not deppentd of <b>SubD Type  filter</b>.
                         </p>
                         <div class="gifBlock">
-                            <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                            <figure>
+                                <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                                <figcaption>Show & Select by filters</figcaption>
+                            </figure>
                         </div>
                     </div>
 
                     <div>
-                        <h3>2.</h3>
-                        <p>
-                            <b>Selects</b> objects with subdivision or <b>Shows</b> SubD information in viewport using filters(type, hidded objects and proccessing source).
-                             <b>Show feature</b> processing  modifiers with specific  name <b>"Global_QSubD_Preview"</b>
-                        </p>
+                        <h3>2</h3>
+                        <div>
+                            <ul>
+                                <li>
+                                    <b>Toggle</b> - runs <a href="#go_ToggSubD" class="goTo">Toggle SubD</a>.
+                                </li>
+                                <li>
+                                    <b>SubD</b> - runs <a href="#go_SubD" class="goTo">SubD</a>.
+                                </li>
+                                <li>
+                                    <b>UnSubD</b> - runs <a href="#go_UnSubD" class="goTo">UnSubD</a>.
+                                </li>
+                                <li>
+                                    <b>Safe to Poly</b> - runs <a href="#go_SafeToPoly" class="goTo">Safe to Poly</a>.
+                                </li>
+                                <li>
+                                    <b>Safe to Spline</b> - runs <a href="#go_SafeToSpline" class="goTo">Safe to Spline</a>.
+                                </li>
+                                <li>
+                                    <b>Zero Face</b> - selects geometric objects with zero face geometry.
+                                    Zero face geometry can be produced after converting non renderable spline to regular Editable Poly.                                </li>
+                            </ul>
+                        </div>
                         <div class="gifBlock">
-                            <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                            <figure>
+                                <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                                <figcaption>Zero Face</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                                <figcaption>Zero Face</figcaption>
+                            </figure>
+                            
                         </div>
                     </div>
                                  
