@@ -34,7 +34,7 @@
                 <h3>
                     <a href="#">QST2</a> <!--go top-->    
                 </h3> 
-                <div class="QSTVersion">V2.15</div>         
+                <div class="ProdVersion">V2.15</div>         
             </div>
 
             <ul class="list-unstyled components">
@@ -147,7 +147,7 @@
                         <b>Smart instansing</b> of subdivision modifiers 
                     </li>
                     <li>
-                        <b>Non Destructive</b> workflow
+                        <b>Non-destructive</b> workflow
                     </li>
                     <li>
                         Keeping working on saved scenes(automatic getting modifiers settings from scene and keep it instancing)
@@ -496,10 +496,23 @@
                         <h3>
                             1<a name="go_Settings_01" class="goToHead"></a>
                         </h3>
-                        <p>
-                            <b>Selects</b> objects with subdivision or <b>Shows</b> SubD information in viewport by filters(type, hidded objects and proccessing source).
-                             <b>Show feature</b> processing  modifiers with specific  name - <b>"Global_QSubD_Preview"</b> and not deppentd of <b>SubD Type  filter</b>.
-                        </p>
+                        <ul>
+                            <li>
+                                <b>Select</b> - selects objects with subdivision by filters (type, hidded objects and proccessing source).
+
+                            </li>
+                            <li>
+                                <b>Show</b> - shows SubD information in the viewport by filters (hidded objects and proccessing source).
+
+                            </li>
+                            <li>
+                                Function <b>Show</b> - not depends of <b>SubD Type  filter</b>.
+
+                            </li>
+                            <li>
+                                Both functions are processed modifiers with a specific name - <b>"Global_QSubD_Preview"</b>.
+                            </li>
+                        </ul>
                         <div class="gifBlock">
                             <figure>
                                 <img src="content/gif/qst2_show_select_01.gif"  alt="">
@@ -532,6 +545,40 @@
                                 <li>
                                     <b>Zero Face</b> - selects geometric objects with zero face geometry.
                                     Zero face geometry can be produced after converting non renderable spline to regular Editable Poly.                                </li>
+                            </ul>
+                        </div>
+                        <div class="gifBlock">
+                            <figure>
+                                <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                                <figcaption>Zero Face</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="content/gif/qst2_show_select_01.gif"  alt="">
+                                <figcaption>Zero Face</figcaption>
+                            </figure>
+                            
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>
+                            3<a name="go_Settings_03" class="goToHead"></a>
+                        </h3>
+                        <div>
+                            <p>
+                                Working mode(WM) one of the most importat setting of QST. You can choose between "Modifier based" and "Hybrid".
+                                 Both WMs use special modifier name - "Global_QSubD_Preview" to efficiently proccess
+                                the modifier stack. Non-destructive workflow supported by both.
+                            </p>
+                            <ul>
+                                <li>
+                                    "Modifier based" - in this case you can add/remove/toggle subdivision modifiers based on settings, NURMS subdivision will be ignored.
+                                     Safe to poly and Safe to spline will ignore NURMS subdivision and convert it as regular.
+                                </li>
+                                <li>
+                                    "Hybrid" - has the same functions as "Modifier based", but in this case the NURMS subdivision is not ignored. NURMS subdivision can be added 
+                                    only when any subobject level(vertex, edge..) of Editable Poly is active.
+                                </li>
                             </ul>
                         </div>
                         <div class="gifBlock">
