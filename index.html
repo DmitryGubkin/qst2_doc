@@ -468,27 +468,17 @@
                         <div class="item" > 
                             5
                         </div>
-                       </a>
-                        <a href="#go_Settings_06">
-                        <div class="item" > 
-                            6
-                        </div>
-                       </a>
-                        <a href="#go_Settings_07">
-                        <div class="item" > 
-                            7
-                        </div>
-                       </a>                       
+                       </a>                      
                    </div>
 
                    <div class = "Important_info">
                     <p>
-                        Hover over the QST UI element in 3ds Max to see what it does.
+                        Hover over the QST UI elements in 3ds Max to see what it does.
                     </p>
                     </div>
                     <div class = "Important_info Important_info-warning">
                         <p>
-                            Do not rename any modifier to "Global_QSubD_Preview", because this name is used by QST to efficiently process the modifier stack.
+                            Do not rename any modifier to "Global_QSubD_Preview", because this name is used by QST to efficiently process modifier stack.
                         </p>
                         </div>
                     
@@ -566,20 +556,28 @@
                         </h3>
                         <div>
                             <p>
-                                Working mode(WM) one of the most importat setting of QST. You can choose between "Modifier based" and "Hybrid".
-                                 Both WMs use special modifier name - "Global_QSubD_Preview" to efficiently proccess
-                                the modifier stack. Non-destructive workflow supported by both.
+                                <b>Working mode(WM)</b> one of the most importat setting of QST. You can choose between "Modifier based" and "Hybrid".
+                                Both WM's use special modifier name - "Global_QSubD_Preview" to efficiently proccess
+                                modifier stack. <b>Non-destructive</b> workflow supported by both.
                             </p>
                             <ul>
                                 <li>
-                                    "Modifier based" - in this case you can add/remove/toggle subdivision modifiers based on settings, NURMS subdivision will be ignored.
-                                     Safe to poly and Safe to spline will ignore NURMS subdivision and convert it as regular.
+                                    <b>"Modifier based"</b> - uning this WM you can <a href="#go_SubD" class="goTo">add</a>/<a href="#go_UnSubD" class="goTo">remove</a>/<a href="#go_ToggSubD" class="goTo">toggle</a> subdivision modifiers based on settings, <b>NURMS subdivision will be ignored</b>.
+                                    <a href="#go_SafeToPoly" class="goTo">Safe to Poly</a> and <a href="#go_SafeToSpline" class="goTo">Safe to Spline</a> will ignore NURMS subdivision and convert it as regular Max's "convert to".
                                 </li>
                                 <li>
-                                    "Hybrid" - has the same functions as "Modifier based", but in this case the NURMS subdivision is not ignored. NURMS subdivision can be added 
+                                    <b>"Hybrid"</b> - has the same functions as "Modifier based", but <b>NURMS subdivision is not ignored</b>. NURMS subdivision can be added 
                                     only when any subobject level(vertex, edge..) of Editable Poly is active.
                                 </li>
                             </ul>
+                        </div>
+                        <div class = "Important_info">
+                            <p>
+                                So, if you prefer to use NURMS subdivision - “Hybrid”, otherwise - “Modifier based”.
+                            </p>
+                            <p>
+                                To Apply the WM change press <a href="#go_QSTSetting" class="goTo">OK/Apply/Store</a> button.
+                            </p>
                         </div>
                         <div class="gifBlock">
                             <figure>
